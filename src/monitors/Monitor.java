@@ -1,4 +1,4 @@
-package MonitorProject;
+package monitors;
 
 public class Monitor {
     private int height;

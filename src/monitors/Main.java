@@ -1,7 +1,7 @@
-package code;
+package monitors;
 
-import code.monitors.TubeMonitor;
-import code.monitors.ZhKrMonitor;
+import monitors.monitors.TubeMonitor;
+import monitors.monitors.ZhKrMonitor;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,8 +13,7 @@ public class Main {
         monitors[1] = new TubeMonitor(1500, 1500, 50);
         monitors[2] = new ZhKrMonitor(gamma, 100, 2000, 500);
 
-        for (int i = 0; i < monitors.length; i++) {
-            Monitor monitor = monitors[i];
+        for (Monitor monitor : monitors) {
             System.out.println(monitor.toString());
         }
     }

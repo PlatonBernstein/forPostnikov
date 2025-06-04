@@ -1,4 +1,4 @@
-package PersonalComputerProject;
+package computers;
 
 public class PersonalComputer extends ElectronicDevice {
 

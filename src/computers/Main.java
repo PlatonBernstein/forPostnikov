@@ -1,6 +1,6 @@
-package PersonalComputerProject;
+package computers;
 
-import PersonalComputerProject.personalComputers.StaticPC;
+import computers.personalComputers.StaticPC;
 
 
 public class Main {

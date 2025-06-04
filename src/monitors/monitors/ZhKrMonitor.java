@@ -1,5 +1,5 @@
-package code.monitors;
-import code.Monitor;
+package monitors.monitors;
+import monitors.Monitor;
 import java.util.Arrays;
 
 public class ZhKrMonitor extends Monitor {
