@@ -1,6 +1,6 @@
-package PersonalComputerProject.personalComputers;
+package computers.personalComputers;
 
-import PersonalComputerProject.PersonalComputer;
+import computers.PersonalComputer;
 
 import java.util.Arrays;
 import java.util.Objects;

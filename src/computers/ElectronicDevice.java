@@ -1,4 +1,4 @@
-package PersonalComputerProject;
+package computers;
 
 public abstract class ElectronicDevice {
     private boolean deviceStatus = false;

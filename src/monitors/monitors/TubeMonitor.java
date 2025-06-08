@@ -1,5 +1,5 @@
-package code.monitors;
-import code.Monitor;
+package monitors.monitors;
+import monitors.Monitor;
 
 public class TubeMonitor extends Monitor {
     private int numberOfTubes;
