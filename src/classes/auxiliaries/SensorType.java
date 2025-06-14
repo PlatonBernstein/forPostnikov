@@ -1,6 +1,6 @@
 package classes.auxiliaries;
 
-public enum MouseSensorType {
+public enum SensorType {
     optical,
     laser,
     trackballOptical,

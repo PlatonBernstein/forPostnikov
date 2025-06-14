@@ -1,6 +1,6 @@
 package classes.auxiliaries;
 
-public enum DevicePowerSource {
+public enum PowerSource {
     Battery,
     Socket,
     Computer;

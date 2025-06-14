@@ -1,6 +1,6 @@
 package classes.auxiliaries;
 
-public enum MouseConnectionType {
+public enum ConnectionType {
     Wireless,
     Wire;
 }

@@ -1,8 +1,8 @@
 package classes.hardware.devices;
 
-import classes.auxiliaries.DevicePowerSource;
-import classes.auxiliaries.MouseConnectionType;
-import classes.auxiliaries.MouseSensorType;
+import classes.auxiliaries.PowerSource;
+import classes.auxiliaries.ConnectionType;
+import classes.auxiliaries.SensorType;
 import classes.auxiliaries.Power;
 import classes.hardware.Frame;
 import classes.production.ProductionLabel;
@@ -11,20 +11,20 @@ public class Mouse {
     private Frame frame;
     private ProductionLabel productionLabel;
     private Power power;
-    private DevicePowerSource devicePowerSource;
+    private PowerSource powerSource;
     private int numberOfButtons;
-    private MouseSensorType mouseSensorType;
-    private MouseConnectionType mouseConnectionType;
+    private SensorType sensorType;
+    private ConnectionType connectionType;
 
-    public Mouse(Frame frame, ProductionLabel productionLabel, Power power, DevicePowerSource devicePowerSource,
-                 int numberOfButtons, MouseSensorType mouseSensorType, MouseConnectionType mouseConnectionType) {
+    public Mouse(Frame frame, ProductionLabel productionLabel, Power power, PowerSource powerSource,
+                 int numberOfButtons, SensorType sensorType, ConnectionType connectionType) {
         this.frame = frame;
         this.productionLabel = productionLabel;
         this.power = power;
-        this.devicePowerSource = devicePowerSource;
+        this.powerSource = powerSource;
         this.numberOfButtons = numberOfButtons;
-        this.mouseSensorType = mouseSensorType;
-        this.mouseConnectionType = mouseConnectionType;
+        this.sensorType = sensorType;
+        this.connectionType = connectionType;
     }
 
     public Frame getFrame() {
@@ -59,36 +59,36 @@ public class Mouse {
         this.numberOfButtons = numberOfButtons;
     }
 
-    public MouseSensorType getMouseSensorType() {
-        return mouseSensorType;
+    public SensorType getMouseSensorType() {
+        return sensorType;
     }
 
-    public void setMouseSensorType(MouseSensorType mouseSensorType) {
-        this.mouseSensorType = mouseSensorType;
+    public void setMouseSensorType(SensorType sensorType) {
+        this.sensorType = sensorType;
     }
 
-    public MouseConnectionType getMouseConnectionType() {
-        return mouseConnectionType;
+    public ConnectionType getMouseConnectionType() {
+        return connectionType;
     }
 
-    public void setMouseConnectionType(MouseConnectionType mouseConnectionType) {
-        this.mouseConnectionType = mouseConnectionType;
+    public void setMouseConnectionType(ConnectionType connectionType) {
+        this.connectionType = connectionType;
     }
 
-    public DevicePowerSource getDevicePowerSource() {
-        return devicePowerSource;
+    public PowerSource getDevicePowerSource() {
+        return powerSource;
     }
 
-    public void setDevicePowerSource(DevicePowerSource devicePowerSource) {
-        this.devicePowerSource = devicePowerSource;
+    public void setDevicePowerSource(PowerSource powerSource) {
+        this.powerSource = powerSource;
     }
 
     @Override
     public String toString() {
         return "Mouse characteristics: " +
                 this.numberOfButtons +
-                this.mouseSensorType +
-                this.mouseConnectionType +
+                this.sensorType +
+                this.connectionType +
                 this.frame.toString() +
                 this.productionLabel.toString() +
                 this.power.toString();
