@@ -1,23 +1,23 @@
 package classes.hardware;
 
 public class Port {
-    private String name;
+    private String type;
     private String orientation;
     private int numberOf;
 
 
     public Port(String name, String orientation, int numberOf) {
-        this.name = name;
+        this.type = name;
         this.orientation = orientation;
         this.numberOf = numberOf;
     }
 
     public String getName() {
-        return name;
+        return type;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.type = name;
     }
 
     public String getOrientation() {
@@ -38,7 +38,7 @@ public class Port {
 
     @Override
     public String toString() {
-        return "This port characteristics: name of port - " + this.name +
+        return "This port characteristics: name of port - " + this.type +
                 ", port orientation - " + this.orientation +
                 ", number of such port in one place - " + this.numberOf;
     }

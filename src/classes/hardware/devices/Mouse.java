@@ -1,26 +1,35 @@
 package classes.hardware.devices;
 
+import classes.auxiliaries.DevicePowerSource;
+import classes.auxiliaries.MouseConnectionType;
+import classes.auxiliaries.MouseSensorType;
 import classes.auxiliaries.Power;
 import classes.hardware.Frame;
-import classes.production.ProductionMarkings;
+import classes.production.ProductionLabel;
+
+/* Енумами можно сделать additionalButtons, sensorType
+* в рамках класса нужно реализовать возможность мышек быть беспроводными/проводными,
+* отобразить разные виды сенсоров (мыши бывают не только оптические)
+* Это можно выполнить как серия классов или как много енумов */
 
 public class Mouse {
     private Frame frame;
-    private ProductionMarkings productionMarkings;
+    private ProductionLabel productionLabel;
     private Power power;
+    private DevicePowerSource devicePowerSource;
     private int numberOfButtons;
-    private String additionalButtons;
-    private String sensorType;
-    private int sensorFrequency;
+    private MouseSensorType mouseSensorType;
+    private MouseConnectionType mouseConnectionType;
 
-    public Mouse(Frame frame, ProductionMarkings productionMarkings, Power power, int numberOfButtons, String additionalButtons, String sensorType, int sensorFrequency) {
+    public Mouse(Frame frame, ProductionLabel productionLabel, Power power, DevicePowerSource devicePowerSource,
+                 int numberOfButtons, MouseSensorType mouseSensorType, MouseConnectionType mouseConnectionType) {
         this.frame = frame;
-        this.productionMarkings = productionMarkings;
+        this.productionLabel = productionLabel;
         this.power = power;
+        this.devicePowerSource = devicePowerSource;
         this.numberOfButtons = numberOfButtons;
-        this.additionalButtons = additionalButtons;
-        this.sensorType = sensorType;
-        this.sensorFrequency = sensorFrequency;
+        this.mouseSensorType = mouseSensorType;
+        this.mouseConnectionType = mouseConnectionType;
     }
 
     public Frame getFrame() {
@@ -31,12 +40,12 @@ public class Mouse {
         this.frame = frame;
     }
 
-    public ProductionMarkings getProductionMarkings() {
-        return productionMarkings;
+    public ProductionLabel getProductionMarkings() {
+        return productionLabel;
     }
 
-    public void setProductionMarkings(ProductionMarkings productionMarkings) {
-        this.productionMarkings = productionMarkings;
+    public void setProductionMarkings(ProductionLabel productionLabel) {
+        this.productionLabel = productionLabel;
     }
 
     public Power getPower() {
@@ -55,39 +64,38 @@ public class Mouse {
         this.numberOfButtons = numberOfButtons;
     }
 
-    public String getAdditionalButtons() {
-        return additionalButtons;
+    public MouseSensorType getMouseSensorType() {
+        return mouseSensorType;
     }
 
-    public void setAdditionalButtons(String additionalButtons) {
-        this.additionalButtons = additionalButtons;
+    public void setMouseSensorType(MouseSensorType mouseSensorType) {
+        this.mouseSensorType = mouseSensorType;
     }
 
-    public String getSensorType() {
-        return sensorType;
+    public MouseConnectionType getMouseConnectionType() {
+        return mouseConnectionType;
     }
 
-    public void setSensorType(String sensorType) {
-        this.sensorType = sensorType;
+    public void setMouseConnectionType(MouseConnectionType mouseConnectionType) {
+        this.mouseConnectionType = mouseConnectionType;
     }
 
-    public int getSensorFrequency() {
-        return sensorFrequency;
+    public DevicePowerSource getDevicePowerSource() {
+        return devicePowerSource;
     }
 
-    public void setSensorFrequency(int sensorFrequency) {
-        this.sensorFrequency = sensorFrequency;
+    public void setDevicePowerSource(DevicePowerSource devicePowerSource) {
+        this.devicePowerSource = devicePowerSource;
     }
 
     @Override
     public String toString() {
         return "Mouse characteristics: " +
                 this.numberOfButtons +
-                this.additionalButtons +
-                this.sensorType +
-                this.sensorFrequency +
+                this.mouseSensorType +
+                this.mouseConnectionType +
                 this.frame.toString() +
-                this.productionMarkings.toString() +
+                this.productionLabel.toString() +
                 this.power.toString();
     }
 }

@@ -1,11 +1,10 @@
 package classes.auxiliaries;
 
-public class Proportions {
+public class Size {
     private int width;
     private int height;
     private int length;
     private String shape;
-
 
     public int getWidth() {
         return width;
@@ -39,7 +38,7 @@ public class Proportions {
         this.shape = shape;
     }
 
-    public Proportions(int length, int height, int width, String shape) {
+    public Size(int length, int height, int width, String shape) {
         this.length = length;
         this.height = height;
         this.width = width;

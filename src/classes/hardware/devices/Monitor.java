@@ -3,17 +3,17 @@ package classes.hardware.devices;
 import classes.hardware.Frame;
 import classes.auxiliaries.Power;
 import classes.auxiliaries.Screen;
-import classes.production.ProductionMarkings;
+import classes.production.ProductionLabel;
 
 public class Monitor {
     private Frame frame;
-    private ProductionMarkings productionMarkings;
+    private ProductionLabel productionLabel;
     private Power power;
     private Screen screen;
 
-    public Monitor(Frame frame, ProductionMarkings productionMarkings, Power power, Screen screen) {
+    public Monitor(Frame frame, ProductionLabel productionLabel, Power power, Screen screen) {
         this.frame = frame;
-        this.productionMarkings = productionMarkings;
+        this.productionLabel = productionLabel;
         this.power = power;
         this.screen = screen;
     }
@@ -21,7 +21,6 @@ public class Monitor {
     @Override
     public String toString() {
         return "Monitor " + this.screen.toString() + "; " + this.frame.toString() + "; " +
-                this.productionMarkings.toString() + "; " + this.power.toString();
+                this.productionLabel.toString() + "; " + this.power.toString();
     }
-
 }

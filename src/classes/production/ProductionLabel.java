@@ -1,18 +1,19 @@
 package classes.production;
 
-public class ProductionMarkings {
-    private int yearOfProduction;
+import java.text.DateFormat;
+
+public class ProductionLabel {
+    private DateFormat dateOfProduction;
     private int yearsOfWarrantyPeriod;
     private String countryOfProduction;
     private Company company;
 
-
-    public int getYearOfProduction() {
-        return yearOfProduction;
+    public DateFormat getDateOfProduction() {
+        return dateOfProduction;
     }
 
-    public void setYearOfProduction(int yearOfProduction) {
-        this.yearOfProduction = yearOfProduction;
+    public void setDateOfProduction(int dateOfProduction) {
+        this.dateOfProduction = DateFormat.getTimeInstance(dateOfProduction);
     }
 
     public String getCountryOfProduction() {
@@ -39,8 +40,8 @@ public class ProductionMarkings {
         this.yearsOfWarrantyPeriod = yearsOfWarrantyPeriod;
     }
 
-    public ProductionMarkings(int yearOfProduction, String countryOfProduction, Company company, int yearsOfWarrantyPeriod) {
-        this.yearOfProduction = yearOfProduction;
+    public ProductionLabel(int dateOfProduction, String countryOfProduction, Company company, int yearsOfWarrantyPeriod) {
+        this.dateOfProduction = DateFormat.getTimeInstance(dateOfProduction);
         this.yearsOfWarrantyPeriod = yearsOfWarrantyPeriod;
         this.countryOfProduction = countryOfProduction;
         this.company = company;
@@ -50,9 +51,7 @@ public class ProductionMarkings {
     public String toString() {
         return  "company - " + this.company.toString() +
                 ", country of production - " + this.countryOfProduction +
-                ", year of production - " + this.yearOfProduction +
+                ", year of production - " + this.dateOfProduction +
                 ", warranty period in years - " + this.yearsOfWarrantyPeriod;
     }
-
-
 }
