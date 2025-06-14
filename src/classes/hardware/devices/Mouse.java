@@ -7,11 +7,6 @@ import classes.auxiliaries.Power;
 import classes.hardware.Frame;
 import classes.production.ProductionLabel;
 
-/* Енумами можно сделать additionalButtons, sensorType
-* в рамках класса нужно реализовать возможность мышек быть беспроводными/проводными,
-* отобразить разные виды сенсоров (мыши бывают не только оптические)
-* Это можно выполнить как серия классов или как много енумов */
-
 public class Mouse {
     private Frame frame;
     private ProductionLabel productionLabel;
