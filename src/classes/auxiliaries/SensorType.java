@@ -1,8 +1,8 @@
 package classes.auxiliaries;
 
 public enum SensorType {
-    optical,
-    laser,
-    trackballOptical,
-    trackballMechanical;
+    OPTICAL,
+    LASER,
+    TRACKBALL_OPTICAL,
+    TRACKBALL_MECHANICAL;
 }

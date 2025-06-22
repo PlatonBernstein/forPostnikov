@@ -7,17 +7,15 @@ public class Frame {
     private Size size;
     private String color;
     private ProductionLabel productionLabel;
-    private Port[] ports;
     private float mass;
     private String material;
     private String coatingMaterial;
 
 
-    public Frame(Size size, String color, ProductionLabel productionLabel, Port[] ports, float mass, String material, String coatingMaterial) {
+    public Frame(Size size, String color, ProductionLabel productionLabel, float mass, String material, String coatingMaterial) {
         this.size = size;
         this.color = color;
         this.productionLabel = productionLabel;
-        this.ports = ports;
         this.mass = mass;
         this.material = material;
         this.coatingMaterial = coatingMaterial;
@@ -45,14 +43,6 @@ public class Frame {
 
     public void setProductionMarkings(ProductionLabel productionLabel) {
         this.productionLabel = productionLabel;
-    }
-
-    public Port[] getPorts() {
-        return ports;
-    }
-
-    public void setPorts(Port[] ports) {
-        this.ports = ports;
     }
 
     public float getMass() {
@@ -83,7 +73,6 @@ public class Frame {
     public String toString() {
         return "Frame characteristics: frame proportions: " + size.toString().substring(16) +
                 "; frame production markings: " + productionLabel.toString() +
-                "; number of ports - " + this.ports.length +
                 ", color of the frame - " + this.color +
                 ", material of making - " + this.material +
                 ", material of coating - " + this.coatingMaterial +

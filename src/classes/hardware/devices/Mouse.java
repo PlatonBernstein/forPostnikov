@@ -12,17 +12,19 @@ public class Mouse {
     private ProductionLabel productionLabel;
     private Power power;
     private PowerSource powerSource;
-    private int numberOfButtons;
+    private int numberOfProgrammableButtons;
+    private boolean hasBacklight;
     private SensorType sensorType;
     private ConnectionType connectionType;
 
     public Mouse(Frame frame, ProductionLabel productionLabel, Power power, PowerSource powerSource,
-                 int numberOfButtons, SensorType sensorType, ConnectionType connectionType) {
+                 int numberOfProgrammableButtons, boolean hasBacklight, SensorType sensorType, ConnectionType connectionType) {
         this.frame = frame;
         this.productionLabel = productionLabel;
         this.power = power;
         this.powerSource = powerSource;
-        this.numberOfButtons = numberOfButtons;
+        this.numberOfProgrammableButtons = numberOfProgrammableButtons;
+        this.hasBacklight = hasBacklight;
         this.sensorType = sensorType;
         this.connectionType = connectionType;
     }
@@ -51,12 +53,20 @@ public class Mouse {
         this.power = power;
     }
 
-    public int getNumberOfButtons() {
-        return numberOfButtons;
+    public int getNumberOfProgrammableButtons() {
+        return numberOfProgrammableButtons;
     }
 
-    public void setNumberOfButtons(int numberOfButtons) {
-        this.numberOfButtons = numberOfButtons;
+    public void setNumberOfProgrammableButtons(int numberOfProgrammableButtons) {
+        this.numberOfProgrammableButtons = numberOfProgrammableButtons;
+    }
+
+    public boolean isHasBacklight() {
+        return hasBacklight;
+    }
+
+    public void setHasBacklight(boolean hasBacklight) {
+        this.hasBacklight = hasBacklight;
     }
 
     public SensorType getMouseSensorType() {
@@ -86,9 +96,10 @@ public class Mouse {
     @Override
     public String toString() {
         return "Mouse characteristics: " +
-                this.numberOfButtons +
+                this.numberOfProgrammableButtons +
                 this.sensorType +
                 this.connectionType +
+                this.hasBacklight +
                 this.frame.toString() +
                 this.productionLabel.toString() +
                 this.power.toString();

@@ -1,6 +1,8 @@
 package classes.auxiliaries;
 
 public enum ConnectionType {
-    Wireless,
-    Wire;
+    BLUETOOTH,
+    USB_TYPE_A,
+    USB_TYPE_C,
+    WIFI;
 }
